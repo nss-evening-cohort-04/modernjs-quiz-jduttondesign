@@ -1,3 +1,5 @@
+"use strict";
+
 class FistFightingRobot {
   constructor (name, health) {
     this.name = name || "a robot"

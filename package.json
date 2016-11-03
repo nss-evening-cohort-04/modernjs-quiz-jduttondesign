@@ -1,0 +1,30 @@
+{
+  "name": "modernjs-quiz-jduttondesign",
+  "version": "1.0.0",
+  "description": "### Code/Tools Requirements",
+  "main": "robot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nss-evening-cohort-04/modernjs-quiz-jduttondesign.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nss-evening-cohort-04/modernjs-quiz-jduttondesign/issues"
+  },
+  "homepage": "https://github.com/nss-evening-cohort-04/modernjs-quiz-jduttondesign#readme",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-nodeunit": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.1",
+    "matchdep": "^1.0.1"
+  }
+}
