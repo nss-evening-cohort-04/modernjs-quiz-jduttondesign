@@ -1,13 +1,63 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
-  <link rel="stylesheet" href="">
+<head>  
+  <title>Robots</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
-  
-  <div id="output"></output> 
+
+<!--CSS STYLES BELOW-->
+<!--buttons-->
+<a class="btn btn-default" href="#" role="button">Link</a>
+<input class="btn btn-default" type="submit" value="Submit">
+<input class="btn btn-default" type="button" value="Attack!">
+
+<!--horizontal bar at the bottom-->
+<form class="form-horizontal">
+  <div class="form-group form-group-sm">
+    <label class="col-sm-2 control-label" for="formGroupInputSmall">Robot#1</label>
+    <div class="col-sm-10">
+      <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Robot#1">
+    </div>
+  </div>
+
+  <div class="form-group form-group-sm">
+    <label class="col-sm-2 control-label" for="formGroupInputSmall">Robot#2</label>
+    <div class="col-sm-10">
+
+    <select name="myName">
+    <option value="first">1a</option>
+    <option value="last" selected>2a</option>
+    <option value="first">3a</option>
+    <option value="last" selected>4a</option>
+    <option value="first">5a</option>
+    <option value="last" selected>6a</option>  
+</select>
+    <option value="last" selected>last</option><br>
+    
+</select>
+      <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Robot#2">
+    </div>
+  </div>
+</form>
+
+<select name="myName">
+    <option value="first">1b</option>
+    <option value="last" selected>2b</option>
+    <option value="first">3b</option>
+    <option value="last" selected>4b</option>
+    <option value="first">5b</option>
+    <option value="last" selected>6b</option>  
+</select>
+
+<div id="output"></output> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="robot.js"</script>
 </body>
 </html>
