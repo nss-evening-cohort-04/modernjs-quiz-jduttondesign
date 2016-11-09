@@ -34,7 +34,6 @@ function SonRobot() {
   this.damage += this.damageBoost;
   this.isSomthingDifferent = true;
   this.health = Math.floor(Math.random() * 160 + 220);
-  console.log("Math", Math);
 }
   // Connect the prototype chain from Son to Father - specific to this ex.
 SonRobot.prototype = new FatherRobot();
