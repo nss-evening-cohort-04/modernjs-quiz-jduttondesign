@@ -3,11 +3,28 @@ body {
   background-color: orange;
 }
 
+#player1RobotSelect {
+ color: blue;
+}
+
+#player2RobotSelect {
+	color: blue;
+}
+
+
 .half {
 	width: 45%;
 	display: inline-block;
 	color: white;
+	font-size: 1.25em;
 }
+
+ #inputBox {
+    color: blue;
+    margin: 8px;
+  }
+
+
 
 .drop {
 	width: 25%;
