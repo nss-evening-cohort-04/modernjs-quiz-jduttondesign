@@ -4,44 +4,46 @@
 //instantiate a couple robots
 //make them fight
 
-// $( "input" )
-//   .keyup(function() {
-//     var value = $( this ).val();
-//     $( "exampleInputEmail1" ).text( value );
-//   })
-//   .keyup();
+console.log("inside robot");  
+var inputObj = document.createElement("input");   
+//inputObj.type = "submit"
 
-// userInput.addEventListener("keydown", function(){
-//   selectedCard.lastChild.innerHTML = `description: ${userInput.value}`;
-// // //var x = document.getElementById('a').value;
-//  });
+//var myElement = $('#select[name="myName"]');
+
+ // myElement.val(myElement.find('option').first().val());
+
+ //    $( "p" ).bind( "dblclick", function() {
+ //    $( "span" ).text( "Double-click happened in " + this.Submit);
 
 function GrandfatherRobot() {
   this.name = "";
-  this.damage = 10;
-  this.health = 100;
+  this.damage = 0;
+  this.health = 0;
   this.weapon = null;
 }
 
 function FatherRobot() {
   this.damageBoost = 5;
-  this.name = "bob";
+  this.name = "Bob";
 }
-// Connect the prototype chain from Father to Grandfather - specific to this ex.
+  // Connect the prototype chain from Father to Grandfather - specific to this ex.
 FatherRobot.prototype = new GrandfatherRobot();
 
 function SonRobot() {
   this.name = "Fred";
   this.damage += this.damageBoost;
   this.isSomthingDifferent = true;
+  this.health = Math.floor(Math.random() * 160 + 220);
+  console.log("Math", Math);
 }
-// Connect the prototype chain from Son to Father - specific to this ex.
+  // Connect the prototype chain from Son to Father - specific to this ex.
 SonRobot.prototype = new FatherRobot();
 
 function SonRobot2() {
 this.name = "Alex";
 this.damage += this.damageBoost;
 this.isSomthingDifferent2 = true;
+this.health = Math.floor(Math.random() * 150 + 210);
 }
 
 SonRobot2.prototype = new FatherRobot();
@@ -61,44 +63,63 @@ AuntRobot.prototype = new GrandfatherRobot();//Connected Aunt level robot to Gra
 function DaughterRobot() {
   this.name = "Sallie";
   this.damage += 20;
-  this.health = 10;
+  this.health += Math.floor(Math.random() * 100 + 200);
   this.weapon = null;
 }
-// Connect the prototype chain from Daughter to "Aunt" - specific to this ex.
+  // Connect the prototype chain from Daughter to "Aunt" - specific to this ex.
 DaughterRobot.prototype = new AuntRobot();
 
 function DaughterRobot2() {
-  this.name = "Sallie";
-  this.damage += 20;
-  this.health = 10;
+  this.name = "Betsy";
+  this.damage += 40;
+  this.health += Math.floor(Math.random() * 100 + 200);
   this.weapon = null;
 }
 
-// Connect the prototype chain from Daughter to "Aunt" - specific to this ex.
+  // Connect the prototype chain from Daughter to "AuntRobot" - specific to this ex.
 DaughterRobot2.prototype = new AuntRobot();
 
 function UncleRobot() {
   this.damageBoost = 5;
-  this.name = "bob";
+  this.name = "Tom";
 }
-// Connect the prototype chain from Father to Grandfather - specific to this ex.
+  // Connect the prototype chain from Father to Grandfather - specific to this ex.
 UncleRobot.prototype = new GrandfatherRobot();
 
 function CousinRobot() {
-  this.name = "Fred";
+  this.name = "Mark";
   this.damage += this.damageBoost;
+  this.health = Math.floor(Math.random() * 200 + 250);
   this.isSomthingDifferent = true;
 }
-// Connect the prototype chain from Son to Father - specific to this ex.
+  // Connect the prototype chain from Son to Father - specific to this ex.
 CousinRobot.prototype = new UncleRobot();
 
 function CousinRobot2() {
-this.name = "Alex";
-this.damage += this.damageBoost;
-this.isSomthingDifferent2 = true;
+  this.name = "Dan";
+  this.damage += this.damageBoost;
+  this.isSomthingDifferent2 = true;
+  this.health = Math.floor(Math.random() * 260 + 320);
 }
 
 CousinRobot2.prototype = new UncleRobot();
+
+
+// var WilliamRobot = new CousinRobot2();
+// console.log("WilliamRobot", WilliamRobot);
+
+// function attack (otherRobot) {
+//      otherRobot.health -= this.atk;
+//      return this;
+
+// function attack (otherRobot2) {
+//      otherRobot2.health -= this.atk;
+//      return this;
+
+ //return NewRobot; 
+  //})(Robot || {});
+
+
 
 // function FistFightingRobot (name, health) {
 //   this.name = name || "a robot";
@@ -146,7 +167,6 @@ CousinRobot2.prototype = new UncleRobot();
 
 // fr.attack(er);
 // er.attack(fr);
-
 
 // console.info("state after round 1", er, fr);
 
