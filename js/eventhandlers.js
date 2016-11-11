@@ -65,18 +65,19 @@ $( "#createRobots" ).on( "click", function() {
 		var Fighter2 = new CousinRobot2();
 	}
 
-	// var Fighter1 = new DaughterRobot();
-	//console.log("Fighter1",Fighter1)	
+//reference to attack btn out
 
+//reference to each p tag health outputs
 
+//when button gets clicked 
 
+//.text in jquery putting new text in p tag/dom
 
-
-
-
-
-
-
-
+//determining if the game is over boolean output
 
 });
+
+
+
+// var Fighter1 = new DaughterRobot();
+	//console.log("Fighter1",Fighter1)
