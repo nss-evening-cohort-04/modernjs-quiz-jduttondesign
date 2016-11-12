@@ -18,7 +18,7 @@ function getRandom(min, max) {
 }
 
 function FatherRobot() {
-  this.name = "John";
+  this.type = "John";
   this.damage += 10;
   this.health += 15;
 }
@@ -27,7 +27,7 @@ FatherRobot.prototype = new GrandfatherRobot();
 
 
 function AuntRobot() {
-  this.name = "Martha Corinne";
+  this.type = "Martha Corinne";
   this.health += 10;
   this.damage += 20;
 }
@@ -36,7 +36,7 @@ AuntRobot.prototype = new GrandfatherRobot();//Connected Aunt level robot to Gra
 
 
 function UncleRobot() {
-  this.name = "Ben";
+  this.type = "Ben";
   this.health += 10;
   this.damage += 5;
 }
@@ -45,7 +45,7 @@ UncleRobot.prototype = new GrandfatherRobot();
 
 
 function SonRobot() {
-  this.name = "John-Boy";
+  this.type = "John-Boy";
   this.health += 30;
   this.damage += 10;
 }
@@ -54,7 +54,7 @@ function SonRobot() {
 SonRobot.prototype = new FatherRobot();
 
 function SonRobot2() {
-  this.name = "Jim-Bob";
+  this.type = "Jim-Bob";
   this.health += 5;
   this.damage += 15;
 }
@@ -65,7 +65,7 @@ SonRobot2.prototype = new FatherRobot();
 
 
 function DaughterRobot() {
-  this.name = "Mary Ellen";
+  this.type = "Mary Ellen";
   this.health += 5;
   this.damage += 10;
 }
@@ -73,7 +73,7 @@ function DaughterRobot() {
 DaughterRobot.prototype = new AuntRobot();
 
 function DaughterRobot2() {
-  this.name = "Elizabeth";
+  this.type = "Elizabeth";
   this.health += 5;
   this.damage += 25;
 }
@@ -83,7 +83,7 @@ DaughterRobot2.prototype = new AuntRobot();
 
 
 function CousinRobot() {
-  this.name = "Corabeth";
+  this.type = "Corabeth";
   this.health += 5;
   this.damage += 5;
 }
@@ -91,7 +91,7 @@ function CousinRobot() {
 CousinRobot.prototype = new UncleRobot();
 
 function CousinRobot2() {
-  this.name = "Ike";
+  this.type = "Ike";
   this.health += 35;
   this.damage += 10;
 }
