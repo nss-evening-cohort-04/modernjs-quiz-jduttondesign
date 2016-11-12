@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Robots Game</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body>
+
+<h1 id="title">Walton's Mountain: The Warriors</h1>
+
+  <div id="inputBox">
+    <div class="half">
+      <label for="exampleInputEmail1">Player Robot #1</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Name">
+      <select id="player1RobotSelect" name="select">
+        <option value="SonRobot">SonRobot</option> 
+        <option value="SonRobot2">SonRobot 2</option>
+        <option value="DaughterRobot">DaughterRobot</option>
+        <option value="DaughterRobot2">DaughterRobot 2</option>
+        <option value="CousinRobot">CousinRobot</option>
+        <option value="CousinRobot2">CousinRobot 2</option>
+      </select>
+    </div>
+
+    <div class="half">
+      <label for="exampleInputEmail2">Player Robot #2</label>
+      <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Name">
+      <select id="player2RobotSelect" name="select">
+        <option value="SonRobot">SonRobot</option> 
+        <option value="SonRobot2">SonRobot 2</option>
+        <option value="DaughterRobot">DaughterRobot</option>
+        <option value="DaughterRobot2">DaughterRobot 2</option>
+        <option value="CousinRobot">CousinRobot</option>
+        <option value="CousinRobot2">CousinRobot 2</option>
+      </select>
+    </div> 
+
+  <button class="btn btn-success" id="createRobots">Create Robots</button>
+  <button class="btn btn-success" disabled="true" id="attackRobots">Attack Robots</button>
+  <div id="output">Output Health Score
+      <p id="player1RobotHealth"></p>
+      <p id="player2RobotHealth"></p>
+      <p id="winner"></p>
+
+
+  </div>
+
+<script type="text/javascript" src="./lib/bower_components/jquery/dist/jquery.min.js"</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="./js/robot.js" type="text/javascript"></script>
+<script src="./js/eventhandlers.js" type="text/javascript"></script>
+</body>
+</html>
