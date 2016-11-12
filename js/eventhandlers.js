@@ -1,5 +1,7 @@
 'use strict';
 
+var Fighter1, Fighter2;
+
 $( "#createRobots" ).on( "click", function() {
   
 	// this is the robot that the user selected from the dropdown
@@ -11,27 +13,27 @@ $( "#createRobots" ).on( "click", function() {
 	// if user selects DaughterRobot
 	// 	create new DaughterRobot
 	if (player1Robot === "SonRobot") {
-		var Fighter1 = new SonRobot();
+		Fighter1 = new SonRobot();
 	}
 
 	if (player1Robot === "SonRobot2"){
-		var Fighter1 = new SonRobot2();
+		Fighter1 = new SonRobot2();
 	}
 	
 	if (player1Robot === "DaughterRobot"){
-		var Fighter1 = new DaughterRobot();
+		Fighter1 = new DaughterRobot();
 	}
 
 	if (player1Robot === "DaughterRobot2"){
-		var Fighter1 = new DaughterRobot2();
+		Fighter1 = new DaughterRobot2();
 	}
 
 	if (player1Robot === "CousinRobot"){
-		var Fighter1 = new CousinRobot();
+		Fighter1 = new CousinRobot();
 	}
 
 	if (player1Robot === "CousinRobot2"){
-		var Fighter1 = new CousinRobot2();
+		Fighter1 = new CousinRobot2();
 	}
 
 
@@ -39,45 +41,73 @@ $( "#createRobots" ).on( "click", function() {
 
 // this is the robot that the user selected from the dropdown
 	var player2Robot = $("#player2RobotSelect").val();
-	console.log("player2Robot:", player2Robot);
 
 	if (player2Robot === "SonRobot") {
-		var Fighter2 = new SonRobot();
+		Fighter2 = new SonRobot();
 	}
 
 	if (player2Robot === "SonRobot2") {
-		var Fighter2 = new SonRobot();
+		Fighter2 = new SonRobot();
 	}
 
 	if (player2Robot === "DaughterRobot") {
-		var Fighter2 = new DaughterRobot();
+		Fighter2 = new DaughterRobot();
 	}
 
 	if (player2Robot === "DaughterRobot2") {
-		var Fighter2 = new DaughterRobot2();
+		Fighter2 = new DaughterRobot2();
 	}
 
 	if (player2Robot === "CousinRobot") {
-		var Fighter2 = new CousinRobot();
+		Fighter2 = new CousinRobot();
 	}
 
 	if (player2Robot === "CousinRobot2") {
-		var Fighter2 = new CousinRobot2();
+		Fighter2 = new CousinRobot2();
 	}
+	//console.log(Fighter1, Fighter2);
 
-//reference to attack btn out
+});
 
-//reference to each p tag health outputs
+$( "#attackRobots" ).on( "click", function() {//I need a reference to the attack btn and output to dom
+       	//conditional to check it either player health <= 0 at bottom
 
-//when button gets clicked 
 
-//.text in jquery putting new text in p tag/dom
+       	// var player1Robot = $("#player2RobotSelect").val();
 
-//determining if the game is over boolean output
+        // console.log(Fighter1.health);
+        // console.log(Fighter2.damage);
+
+        //calculation for player 1 health
+        var currentHealthP1 = Fighter1.health;
+        currentHealthP1 = Fighter1.health - Fighter2.damage 
+        Fighter1.health = currentHealthP1;
+        // end player 1 health calc
+        // console.log(Fighter1.health);
+
+
+        //calculation for player 2 health
+        var currentHealthP2 = Fighter1.health;
+        currentHealthP2 = Fighter1.health - Fighter2.damage 
+        Fighter1.health = currentHealthP2;
+        // end player 2 health calc
+         console.log(Fighter2.health);
+
+
+        $("#player1RobotHealth").text("Fighter 1 health is " + Fighter1.health);
+		$("#player2RobotHealth").text("Fighter 2 health is " + Fighter2.health);
 
 });
 
 
 
-// var Fighter1 = new DaughterRobot();
-	//console.log("Fighter1",Fighter1)
+
+
+
+
+
+
+
+
+
+

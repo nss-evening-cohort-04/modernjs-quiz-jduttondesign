@@ -1,6 +1,5 @@
 "use strict";
 
-
 function GrandfatherRobot() {
   this.name = "";
   this.damage = getRandom(10,20);
@@ -19,50 +18,45 @@ function getRandom(min, max) {
 }
 
 function FatherRobot() {
-  this.name = "Bob";
-  this.damage = 10;
-  this.health = getRandom(10,20);
+  this.name = "John";
+  this.damage += 10;
+  this.health += 15;
 }
   // Connect the prototype chain from Father to Grandfather - specific to this ex.
 FatherRobot.prototype = new GrandfatherRobot();
 
 
 function AuntRobot() {
-  this.name = "Hilma";
-  this.health = 10;
+  this.name = "Martha Corinne";
+  this.health += 10;
   this.damage += 20;
-  this.weapon = null;
 }
 
 AuntRobot.prototype = new GrandfatherRobot();//Connected Aunt level robot to Grandfather
 
 
 function UncleRobot() {
-  this.health = 10;
-  this.damageBoost = 5;
-  this.name = "Tom";
+  this.name = "Ben";
+  this.health += 10;
+  this.damage += 5;
 }
   // Connect the prototype chain from Father to Grandfather - specific to this ex.
 UncleRobot.prototype = new GrandfatherRobot();
 
 
 function SonRobot() {
-  this.name = "Fred";
-  this.damage = 10;
-  this.health += 7;
-  this.isSomthingDifferent = true;
-  //this.health = Math.floor(Math.random() * 160 + 220);
+  this.name = "John-Boy";
+  this.health += 30;
+  this.damage += 10;
 }
 
   // Connect the prototype chain from Son to Father - specific to this ex.
 SonRobot.prototype = new FatherRobot();
 
 function SonRobot2() {
-  this.name = "Alex";
-  this.damage += 15;
+  this.name = "Jim-Bob";
   this.health += 5;
-  this.isSomthingDifferent2 = true;
-//this.health = Math.floor(Math.random() * 150 + 210);
+  this.damage += 15;
 }
 
 SonRobot2.prototype = new FatherRobot();
@@ -71,19 +65,17 @@ SonRobot2.prototype = new FatherRobot();
 
 
 function DaughterRobot() {
-  this.name = "Sallie";
-  this.damage += 10;
+  this.name = "Mary Ellen";
   this.health += 5;
-  //this.health += Math.floor(Math.random() * 100 + 200);
-  this.weapon = null;
+  this.damage += 10;
 }
   // Connect the prototype chain from Daughter to "Aunt" - specific to this ex.
 DaughterRobot.prototype = new AuntRobot();
 
 function DaughterRobot2() {
-  this.name = "Betsy";
-  this.damage += 25;
+  this.name = "Elizabeth";
   this.health += 5;
+  this.damage += 25;
 }
 
   // Connect the prototype chain from Daughter to "AuntRobot" - specific to this ex.
@@ -91,38 +83,32 @@ DaughterRobot2.prototype = new AuntRobot();
 
 
 function CousinRobot() {
-  this.name = "Mark";
-  this.damage += 5;
+  this.name = "Corabeth";
   this.health += 5;
-  this.isSomthingDifferent = true;
+  this.damage += 5;
 }
   // Connect the prototype chain from Son to Father - specific to this ex.
 CousinRobot.prototype = new UncleRobot();
 
 function CousinRobot2() {
-  this.name = "Dan";
+  this.name = "Ike";
   this.health += 35;
   this.damage += 10;
-  this.isSomthingDifferent2 = true;
 }
 
 CousinRobot2.prototype = new UncleRobot();
 
 
-
 var user1SelectedRobot = new SonRobot2();
 console.log("user1SelectedRobot", user1SelectedRobot);
 
-var c = new CousinRobot();
-var g = new GrandfatherRobot();
-console.log("c", c);
-c.attack(g);
+// var c = new CousinRobot();
+// var g = new GrandfatherRobot();
+// console.log("c", c);
+// c.attack(g);
 
-
-console.log("g", g);
-g.attack(c);
-
-
+// console.log("g", g);
+// g.attack(c);
 
 
 
