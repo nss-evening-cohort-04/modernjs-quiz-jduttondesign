@@ -87,18 +87,32 @@ $( "#attackRobots" ).on( "click", function() {//I need a reference to the attack
 
 
         //calculation for player 2 health
-        var currentHealthP2 = Fighter1.health;
-        currentHealthP2 = Fighter1.health - Fighter2.damage 
-        Fighter1.health = currentHealthP2;
+        var currentHealthP2 = Fighter2.health;
+        currentHealthP2 = Fighter2.health - Fighter1.damage 
+        Fighter2.health = currentHealthP2;
         // end player 2 health calc
          console.log(Fighter2.health);
-
 
         $("#player1RobotHealth").text("Fighter 1 health is " + Fighter1.health);
 		$("#player2RobotHealth").text("Fighter 2 health is " + Fighter2.health);
 
-});
 
+	     //Print "Winner" to the Dom
+		let _checkGameOver = () =>{
+         let dom;
+        $('#player1RobotHealth').show();
+        $('#player2RobotHealth').show();
+        };
+
+        if(Fighter1.health() <= 0 && Fighter2.health() > 0){//player 1 dead
+            dom = `${Fighter1.getName()} is Dead. Player ${Fighter2.getName()} wins with ${Fighter2.getRobotType()}`;
+        } else if(Fighter2.getHealth() <= 0 && Fighter1.getHealth() > 0){//player 2 dead
+            dom = `${Fighter2.getName()} is Dead. Player ${Fighter1.getName()} wins with ${Fighter1.getRobotType()}`;
+        } else if(Fighter1.getHealth() <= 0 && Fighter2.getHealth() <= 0){ //both players dead.
+            dom = `${Fighter1.getName()} and ${Fighter2.getName()} are both dead. ${Fighter1.getRobotType()} and ${player2.getRobotType()}`;
+      
+};
+});
 
 
 
